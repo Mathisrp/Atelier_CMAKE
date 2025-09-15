@@ -23,6 +23,7 @@ jobs:
     strategy:
       matrix:
         operation: [add, sub, mul, div, car]
+    name: Test ${{ matrix.operation }}
     steps:
       - uses: actions/checkout@v4
       - name: Build (rebuild just in case)
