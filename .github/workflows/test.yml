@@ -36,3 +36,11 @@ jobs:
         run: |
           cd build
           ./src/calculator ${{ matrix.operation }} 10 5
+
+
+  Deploy:
+    runs-on: ubuntu-latest
+    needs: Tests
+    steps:
+      - name: Déploiement
+        run: echo "Déploiement de la solution"
